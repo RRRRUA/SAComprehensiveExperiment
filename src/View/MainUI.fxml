@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainUiController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+            <Button fx:id="check_btn" mnemonicParsing="false"
+                    onAction="#handleCheckBtn" text="查询联系人">
+               <graphic>
+                  <TextField fx:id="inputTextField" promptText="模糊查询" />
+               </graphic></Button>
+            <Button fx:id="total_Check_btn" mnemonicParsing="false"
+                    onAction="#handleTotalCheckBtn" text="显示联系人" />
+            <Button fx:id="creat_btn" mnemonicParsing="false"
+                    onAction="#handleCreateBtn" text="新增联系人" />
+            <Button fx:id="modify_btn" mnemonicParsing="false"
+                    onAction="#handleModifyBtn" text="更改联系人" />
+            <Button fx:id="delete_btn" mnemonicParsing="false"
+                    onAction="#handleDeleteBtn" text="删除联系人" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="453.0" prefWidth="772.0">
+               <children>
+                  <TableView fx:id="tableView" prefHeight="446.0" prefWidth="770.0">
+                    <columns>
+<!--                      <TableColumn fx:id="IdColumn" prefWidth="83.0" text="序号" />-->
+                      <TableColumn fx:id="NameColumn" minWidth="0.0" prefWidth="144.0" text="姓名" />
+                        <TableColumn fx:id="PhoneColumn" prefWidth="186.0" text="手机号码" />
+                        <TableColumn fx:id="AddressColumn" prefWidth="172.0" text="地址" />
+                        <TableColumn fx:id="CreateDateColumn" prefWidth="182.0" text="创建时间" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </center>
+</BorderPane>

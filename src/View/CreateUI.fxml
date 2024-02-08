@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CreatePeopleController">
+   <children>
+      <Label text="姓名" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+      <TextField fx:id="NameField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+      <Label text="手机号码" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+      <TextField fx:id="PhoneField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Label text="地址" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+      <TextField fx:id="AddressField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button onAction="#handleConfirmButton" text="确认" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+      <Button onAction="#handleCancelButton" text="取消" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <padding>
+      <Insets bottom="20" left="20" right="20" top="20" />
+   </padding>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
